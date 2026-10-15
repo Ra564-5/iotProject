@@ -24,7 +24,15 @@ npm run dev
 - `src/utils/` — helper functions and demo data.
 
 ## Deployment
-Build the static production bundle:
+The `main` branch is configured to deploy to GitHub Pages through `.github/workflows/deploy.yml`.
+
+1. In the GitHub repository, open **Settings → Pages** and set the build source to **GitHub Actions**.
+2. Push this branch to GitHub, or run the **Deploy to GitHub Pages** workflow manually from the Actions tab.
+3. Once the workflow succeeds, the app will be available at <https://ra564-5.github.io/iotProject/>.
+
+Before using real accounts or devices, add `ra564-5.github.io` to the authorized domains in Firebase Authentication and verify that Realtime Database rules restrict access to authenticated users and their permitted devices.
+
+To build the static bundle locally:
 
 ```bash
 npm run build
